@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, createUserWithEmailAndPassword } from "../config/FirebaseConfig";
+import { auth, createUserWithEmailAndPassword, db } from "../config/FirebaseConfig";
+import {  doc, setDoc } from "firebase/firestore";
+
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -14,29 +16,38 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
     if (!password.match(passwordRegex)) {
       setError("Password must be at least 8 characters long, with one number and one special character.");
       return;
     }
-
+  
     if (password !== confirmPassword) {
       setError("Passwords do not match.");
       return;
     }
-
+  
     try {
-
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+  
+      if (user) {
+        const userRef = doc(db, "Users", user.uid);
+        await setDoc(userRef, {
+          email: email,
+          firstName: name,
+          mobile: phone
+        });
+      }
+  
       navigate("/login");
     } catch (err) {
+      console.error("Error signing up:", err.message);
       setError("Error: " + err.message);
     }
   };
-
+  
   return (
     <div className=" container flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">

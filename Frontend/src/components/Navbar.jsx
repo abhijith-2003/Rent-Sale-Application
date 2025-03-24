@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate  } from 'react-router-dom';
 import { auth, onAuthStateChanged, signOut } from '../config/FirebaseConfig';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -20,6 +21,7 @@ const Navbar = () => {
   const handleLogout = () => {
     signOut(auth).then(() => {
       setUser(null);
+      navigate('/login');
     }).catch((error) => {
       console.error("Error signing out:", error);
     });
