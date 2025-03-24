@@ -1,8 +1,8 @@
 {
   "properties": [
     {
-      "id": 1,
-      "image": "assets/img1.jpg",
+      "id": "1",
+      "image": "https://t3.ftcdn.net/jpg/08/23/42/34/360_F_823423411_l5nwHDEz9FIvRIFzlqpkvg9kFkX6Gwt8.jpg",
       "price": "$950,000",
       "title": "Elegant Coastal Villa",
       "location": "123 Luxury Lane, Beverly Hills",
@@ -13,8 +13,8 @@
       "type": "Sale"
     },
     {
-      "id": 2,
-      "image": "assets/img2.jpg",
+      "id": "2",
+      "image": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?cs=srgb&dl=pexels-expect-best-79873-323780.jpg&fm=jpg",
       "price": "$1,450,000",
       "title": "Beachfront Paradise",
       "location": "456 Beach Drive, Malibu",
@@ -25,8 +25,8 @@
       "type": "Sale"
     },
     {
-      "id": 3,
-      "image": "assets/img3.jpg",
+      "id": "3",
+      "image": "https://t4.ftcdn.net/jpg/04/73/72/11/360_F_473721132_I9LNMCvx7Du6EdJNH91EywcNHzgtEclz.jpg",
       "price": "$850,000",
       "title": "Modern Urban Loft",
       "location": "789 City Center, Downtown",
@@ -37,8 +37,8 @@
       "type": "Rent"
     },
     {
-      "id": 4,
-      "image": "assets/img4.jpg",
+      "id": "4",
+      "image": "https://www.adobe.com/sa_en/creativecloud/photography/discover/media_1159b19a8225b2413136806b0be15e4c921e3d122.png?width=750&format=png&optimize=medium",
       "price": "$1,100,000",
       "title": "Charming Mountain Retreat",
       "location": "321 Highland Road, Hollywood Hills",
@@ -49,8 +49,8 @@
       "type": "Sale"
     },
     {
-      "id": 5,
-      "image": "assets/img5.jpg",
+      "id": "5",
+      "image": "https://hurghadiansproperty.com/wp-content/uploads/2024/08/hurghadiansproperty_A_stunning_contemporary_villa_in_Marbella_S_a1848e18-b163-47ee-881c-d7b473fe7e49.webp",
       "price": "$1,800,000",
       "title": "Smart Luxury Home",
       "location": "567 Tech Avenue, Silicon Valley",
@@ -61,8 +61,8 @@
       "type": "Sale"
     },
     {
-      "id": 6,
-      "image": "assets/img6.jpg",
+      "id": "6",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8D6migliT9aBog112hWnFpgVlEHQEvFm_MahDhQgTfg5MS5AfZkPmI2n6QffKjjN7hk&usqp=CAU",
       "price": "$700,000",
       "title": "Family-Friendly Haven",
       "location": "890 Suburban Lane, Santa Monica",
@@ -73,8 +73,8 @@
       "type": "Rent"
     },
     {
-      "id": 7,
-      "image": "assets/img7.jpg",
+      "id": "7",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/467/small_2x/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg",
       "price": "$720,000",
       "title": "Cozy Cottage Retreat",
       "location": "890 Suburban Lane, Santa Monica",
@@ -85,8 +85,8 @@
       "type": "Sale"
     },
     {
-      "id": 8,
-      "image": "assets/img8.jpg",
+      "id": "8",
+      "image": "https://media.istockphoto.com/id/1188457556/photo/craftsman-bungalow-house.jpg?s=612x612&w=0&k=20&c=dmaIfKc05f7Trpf9hmRXYYxAIR0146e5w7dtRusD-bY=",
       "price": "$740,000",
       "title": "Stylish Family Home",
       "location": "890 Suburban Lane, Santa Monica",
@@ -97,8 +97,8 @@
       "type": "Sale"
     },
     {
-      "id": 9,
-      "image": "assets/img9.jpg",
+      "id": "9",
+      "image": "https://static.vecteezy.com/system/resources/previews/022/902/910/non_2x/ai-generative-modern-luxury-real-estate-house-for-sale-and-rent-luxury-property-residence-concept-photo.jpg",
       "price": "$760,000",
       "title": "Chic Suburban Retreat",
       "location": "890 Suburban Lane, Santa Monica",
@@ -109,8 +109,8 @@
       "type": "Rent"
     },
     {
-      "id": 10,
-      "image": "assets/img10.jpg",
+      "id": "10",
+      "image": "https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2016/8/12/1/IS-Architecture_Ocean-Beach-Bungalow_12.jpg.rend.hgtvcom.1280.960.85.suffix/1471010266807.webp",
       "price": "$780,000",
       "title": "Elegant Family Residence",
       "location": "890 Suburban Lane, Santa Monica",
@@ -121,8 +121,8 @@
       "type": "Sale"
     },
     {
-      "id": 11,
-      "image": "assets/img11.jpg",
+      "id": "11",
+      "image": "https://cityhomeindia.in/frontend/images/slider/cityhomeindia03.jpg",
       "price": "$800,000",
       "title": "Charming Craftsman Home",
       "location": "890 Suburban Lane, Santa Monica",
@@ -133,7 +133,7 @@
       "type": "Sale"
     },
     {
-      "id": 12,
+      "id": "12",
       "image": "assets/img12.jpg",
       "price": "$820,000",
       "title": "Spacious Family Retreat",
@@ -145,8 +145,8 @@
       "type": "Rent"
     },
     {
-      "id": 13,
-      "image": "assets/img6.jpg",
+      "id": "13",
+      "image": "https://t3.ftcdn.net/jpg/09/65/93/92/360_F_965939250_c5enwfICZhMXlr33mKYeP1J53MyAtEPY.jpg",
       "price": "$700,000",
       "title": "Family-Friendly Haven",
       "location": "890 Suburban Lane, Santa Monica",
@@ -157,8 +157,8 @@
       "type": "Rent"
     },
     {
-      "id": 14,
-      "image": "assets/img7.jpg",
+      "id": "14",
+      "image": "https://png.pngtree.com/thumb_back/fw800/background/20240530/pngtree-modern-luxury-real-estate-mansion-house-image_15842799.jpg",
       "price": "$720,000",
       "title": "Cozy Cottage Retreat",
       "location": "890 Suburban Lane, Santa Monica",
@@ -169,8 +169,8 @@
       "type": "Sale"
     },
     {
-      "id": 15,
-      "image": "assets/img8.jpg",
+      "id": "15",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/022/881/007/small_2x/ai-generative-3d-modern-luxury-real-estate-house-for-sale-and-rent-luxury-property-concept-photo.jpg",
       "price": "$740,000",
       "title": "Stylish Family Home",
       "location": "890 Suburban Lane, Santa Monica",

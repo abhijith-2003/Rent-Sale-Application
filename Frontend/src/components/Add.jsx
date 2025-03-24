@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-const Add = ({ onAddProperty }) => {
+const Add = () => {
     const [newProperty, setNewProperty] = useState({
         title: '',
         description: '',
         location: '',
         price: '',
         image: '',
-        availability: '',
+        type: '', 
+        beds: '',
+        baths: '',
+        sqft: '', 
     });
 
-    // Handle form input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewProperty((prevState) => ({
@@ -19,21 +22,28 @@ const Add = ({ onAddProperty }) => {
         }));
     };
 
-    // Add new property to the list
     const handleAddProperty = (e) => {
         e.preventDefault();
-        onAddProperty({
-            id: Date.now(),
-            ...newProperty,
-        });
-        setNewProperty({
-            title: '',
-            description: '',
-            location: '',
-            price: '',
-            image: '',
-            availability: '',
-        });
+        
+        axios.post('http://localhost:3000/properties', newProperty)
+            .then((res) => {
+                alert("Added successfully");
+                setNewProperty({
+                    title: '',
+                    description: '',
+                    location: '',
+                    price: '',
+                    image: '',
+                    type: '',
+                    beds: '',
+                    baths: '',
+                    sqft: '',
+                });
+            })
+            .catch((error) => {
+                console.error("There was an error adding the property!", error);
+                alert("An error occurred. Please try again.");
+            });
     };
 
     return (
@@ -84,7 +94,65 @@ const Add = ({ onAddProperty }) => {
                             />
                         </div>
 
-                        {/* Image URL */}
+                        {/* Property Type Dropdown */}
+                        <div className="flex flex-col w-full">
+                            <label htmlFor="type" className="text-gray-700 text-lg mb-2"> Type</label>
+                            <select
+                                name="type"
+                                value={newProperty.type}
+                                onChange={handleChange}
+                                className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            >
+                                <option value="">Select Type</option>
+                                <option value="Sale">Sale</option>
+                                <option value="Rent">Rent</option>
+                            </select>
+                        </div>
+
+                        {/* Beds */}
+                        <div className="flex flex-col w-full">
+                            <label htmlFor="beds" className="text-gray-700 text-lg mb-2">Beds</label>
+                            <input
+                                type="number"
+                                name="beds"
+                                value={newProperty.beds}
+                                onChange={handleChange}
+                                placeholder="Number of Beds"
+                                className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            />
+                        </div>
+
+                        {/* Baths */}
+                        <div className="flex flex-col w-full">
+                            <label htmlFor="baths" className="text-gray-700 text-lg mb-2">Baths</label>
+                            <input
+                                type="number"
+                                name="baths"
+                                value={newProperty.baths}
+                                onChange={handleChange}
+                                placeholder="Number of Baths"
+                                className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            />
+                        </div>
+
+                        {/* Square Footage */}
+                        <div className="flex flex-col w-full">
+                            <label htmlFor="sqft" className="text-gray-700 text-lg mb-2">Square Footage</label>
+                            <input
+                                type="number"
+                                name="sqft"
+                                value={newProperty.sqft}
+                                onChange={handleChange}
+                                placeholder="Square Footage"
+                                className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            />
+                        </div>
+
+                       
                         <div className="flex flex-col w-full">
                             <label htmlFor="image" className="text-gray-700 text-lg mb-2">Image URL</label>
                             <input
@@ -96,22 +164,10 @@ const Add = ({ onAddProperty }) => {
                                 className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
                         </div>
-
-                        {/* Availability */}
-                        <div className="flex flex-col w-full">
-                            <label htmlFor="availability" className="text-gray-700 text-lg mb-2">Availability</label>
-                            <input
-                                type="text"
-                                name="availability"
-                                value={newProperty.availability}
-                                onChange={handleChange}
-                                placeholder="Availability"
-                                className="p-3 border rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            />
-                        </div>
                     </div>
+
+                    {/* Description - Now below Image URL */}
                     <div className="grid grid-cols-1 sm:grid-cols-1 gap-6">
-                        {/* Description */}
                         <div className="flex flex-col w-full">
                             <label htmlFor="description" className="text-gray-700 text-lg mb-2">Description</label>
                             <textarea
@@ -125,6 +181,7 @@ const Add = ({ onAddProperty }) => {
                             />
                         </div>
                     </div>
+
                     <button
                         type="submit"
                         className="w-full py-3 bg-blue-600 text-white rounded-lg mt-6 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"

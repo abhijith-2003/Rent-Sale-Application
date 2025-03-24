@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Banner from '../../public/assets/homeImage.jpg'
+import Banner from '../assets/homeImage.jpg'
 
 const Hero = ({ onSearch }) => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -60,22 +60,24 @@ const Hero = ({ onSearch }) => {
                     <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-sky-300 via-sky-300 to-indigo-300 bg-clip-text text-transparent tracking-tight p-3">
                         Where Luxury Meets Lifestyle
                     </h1>
+                    <div className='pb-10'>
                     <p className="text-lg md:text-2xl my-5 text-gray-200">
                         Exclusive estate and architectural masterpieces in southern
                     </p>
+                    </div>
 
-                    <div className="bg-white/30 p-8 rounded-3xl shadow-2xl backdrop-blur-md max-w-2xl mx-auto">
+                    <div className="bg-white/30 p-8 rounded-3xl shadow-2xl backdrop-blur-md max-w-2xl mx-auto ">
                         <div className="flex flex-col md:flex-row gap-3">
                             {/* Search by Location */}
                             <input
                                 type="text"
                                 placeholder="Search by Location"
-                                className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-white text-black transition-colors duration-200"
+                                className="flex-1 px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-gray-300 text-black transition-colors duration-200"
                                 value={searchQuery}
                                 onChange={handleSearchChange}
                             />
                             <button
-                                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                                className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                                 onClick={handleSearchClick}
                             >
                                 Search
@@ -88,7 +90,6 @@ const Hero = ({ onSearch }) => {
                                 {/* Property Type Filter */}
                                 <div>
                                     <label htmlFor="propertyType" className="block text-lg font-medium mb-2">
-                                        Property Type
                                     </label>
                                     <select
                                         id="propertyType"
@@ -108,11 +109,11 @@ const Hero = ({ onSearch }) => {
                                 {/* Price Range Filter */}
                                 <div>
                                     <label htmlFor="priceRange" className="block text-lg font-medium mb-2">
-                                        Price Range
+                                        
                                     </label>
                                     <select
                                         id="priceRange"
-                                        className="w-full px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-white text-black transition-colors duration-200"
+                                        className="w-full px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-gray-300 text-black transition-colors duration-200"
                                         value={priceRange}
                                         onChange={(e) => {
                                             setPriceRange(e.target.value);
@@ -129,11 +130,11 @@ const Hero = ({ onSearch }) => {
                                 {/* Property Size Filter */}
                                 <div>
                                     <label htmlFor="propertySize" className="block text-lg font-medium mb-2">
-                                        Property Size (sq ft)
+                                       
                                     </label>
                                     <select
                                         id="propertySize"
-                                        className="w-full px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-white text-black transition-colors duration-200"
+                                        className="w-full px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 hover:bg-blue-50 focus:bg-gray-300 text-black transition-colors duration-200"
                                         value={propertySize}
                                         onChange={(e) => {
                                             setPropertySize(e.target.value);
