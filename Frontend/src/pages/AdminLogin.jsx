@@ -10,7 +10,7 @@ function AdminLogin() {
 
     // admin credentials 
     const ADMIN_EMAIL = 'admin@gmail.com';
-    const ADMIN_PASSWORD = 'admin123';
+    const ADMIN_PASSWORD = 'admin';
 
     // Handle login
     const handleLogin = (e) => {
