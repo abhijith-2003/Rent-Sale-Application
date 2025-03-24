@@ -3,35 +3,35 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const PropertyDetail = () => {
-  const { id } = useParams(); // Get the property ID from the URL params
-  const [property, setProperty] = useState(null); // State to store the property data
-  const [loading, setLoading] = useState(true); // Loading state to show while data is being fetched
-  const [error, setError] = useState(null); // Error state for error handling
+  const { id } = useParams(); 
+  const [property, setProperty] = useState(null); 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null); 
 
-  // Fetch the property data when the component mounts
+
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/properties/${id}`) // Assuming you are using json-server or similar service
+      .get(`http://localhost:3000/properties/${id}`) 
       .then((response) => {
-        setProperty(response.data); // Set the fetched data
-        setLoading(false); // Set loading to false after the data is fetched
+        setProperty(response.data); 
+        setLoading(false);
       })
       .catch((error) => {
-        setError('Failed to load property data'); // Set error message if fetching fails
-        setLoading(false); // Set loading to false if there’s an error
+        setError('Failed to load property data'); 
+        setLoading(false); 
       });
-  }, [id]); // The effect will run whenever the `id` parameter changes
+  }, [id]); 
 
   if (loading) {
-    return <p>Loading...</p>; // Show loading message while data is being fetched
+    return <p>Loading...</p>; 
   }
 
   if (error) {
-    return <p>{error}</p>; // Show error message if there's an error fetching data
+    return <p>{error}</p>; 
   }
 
   if (!property) {
-    return <p>Property not found</p>; // Show if no property was found with the given ID
+    return <p>Property not found</p>; 
   }
 
   return (
@@ -71,9 +71,15 @@ const PropertyDetail = () => {
             <p className="text-gray-700 mb-4">
               For more information or to schedule a visit, contact us at <strong>123-456-7890</strong> or email us at <strong>info@example.com</strong>.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
-              Contact Agent
-            </button>
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=abhijithnv2003@gmail.com&su=Property Inquiry - ${property.title}&body=Hello Admin,%0A%0AI am interested in the property: ${property.title}, located at ${property.location}.%0A%0APlease provide more details.`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                Contact Admin
+              </button>
+            </a>
           </div>
         </div>
       </div>

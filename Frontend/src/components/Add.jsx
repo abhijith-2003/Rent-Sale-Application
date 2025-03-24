@@ -83,6 +83,7 @@ const Add = () => {
                         {/* Price */}
                         <div className="flex flex-col w-full">
                             <label htmlFor="price" className="text-gray-700 text-lg mb-2">Price</label>
+                            
                             <input
                                 type="number"
                                 name="price"
