@@ -59,13 +59,11 @@ const PropertyDetail = () => {
             </ul>
           </div>
 
-          {/* Property Description Section */}
           <div className="text-lg mb-6">
             <h3 className="font-semibold text-xl text-gray-800 mb-3">Description:</h3>
             <p>{property.description}</p>
           </div>
 
-          {/* Contact Information or CTA */}
           <div className="text-lg mb-6">
             <h3 className="font-semibold text-xl text-gray-800 mb-3">Interested in this property?</h3>
             <p className="text-gray-700 mb-4">

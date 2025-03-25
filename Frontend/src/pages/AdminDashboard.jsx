@@ -5,7 +5,7 @@ import User from '../components/User';
 import Add from '../components/Add';
 
 const AdminDashboard = () => {
-  const [activeComponent, setActiveComponent] = useState('dashboard');
+  const [activeComponent, setActiveComponent] = useState('');
 
   useEffect(() => {
     setActiveComponent('Dashboard');

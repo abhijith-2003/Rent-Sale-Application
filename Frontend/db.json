@@ -61,18 +61,6 @@
       "type": "Sale"
     },
     {
-      "id": "6",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8D6migliT9aBog112hWnFpgVlEHQEvFm_MahDhQgTfg5MS5AfZkPmI2n6QffKjjN7hk&usqp=CAU",
-      "price": "$700,000",
-      "title": "Family-Friendly Haven",
-      "location": "890 Suburban Lane, Santa Monica",
-      "description": "A family-friendly haven with a large backyard, perfect for kids and pets, located in a quiet neighborhood.",
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2550,
-      "type": "Rent"
-    },
-    {
       "id": "7",
       "image": "https://static.vecteezy.com/system/resources/thumbnails/023/309/467/small_2x/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg",
       "price": "$720,000",
